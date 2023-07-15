@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  margin-top: 5rem;
+}
+.container .todo {
+  background-color: white;
+  position: relative;
+  box-shadow: 1px 3px 13px -3px #cacaca;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: auto;
+  max-width: 60%;
+  margin-bottom: 2rem;
+  min-width: 18rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.container .todo .content .task_discription {
+  margin-top: 1rem;
+}
+.container .todo .content .task_discription p {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.container .todo .content .task_name h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  border-bottom: 1px solid #e4e4e4;
+}
+.container .todo .todo_btns {
+  margin-top: auto;
+}
+.container .todo .todo_btns button {
+  margin-right: 0.5rem;
+  border: none;
+  width: 7rem;
+  height: 2.2rem;
+  background-color: aqua;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+.container .todo .editor_toast {
+  display: none;
+}
+.container .editor_active .editor_toast {
+  position: absolute;
+  width: 87%;
+  background-color: black;
+  color: white;
+  top: 35%;
+  height: 60%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.container .editor_active .editor_toast .editor_input {
+  display: flex;
+}
+.container .editor_active .editor_toast .editor_input input {
+  width: 70%;
+  height: 30px;
+  margin: auto;
+  border: none;
+  outline: none;
+  padding: 0px 1rem;
+  font-size: 1.3rem;
+  background: no-repeat;
+  color: white;
+  border-bottom: 1px solid lime;
+}
+.container .editor_active .editor_toast .editor_btns {
+  margin-top: auto;
+}
+.container .editor_active .editor_toast .editor_btns button {
+  border: none;
+  margin-left: 3rem;
+  background: none;
+  color: lime;
+  cursor: pointer;
+}/*# sourceMappingURL=todo.css.map */

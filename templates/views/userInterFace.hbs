@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/scss/todo.css">
+</head>
+
+<body>
+    <button class="btn">Add</button>
+    <input type="text" class="templateName">
+    <input type="text" class="discription">
+    <div class="container">
+        {{#each templates }}
+        <div class="todo" id="{{templateId}}">
+            <div class="content">
+                <div class="task_name">
+                    <h1 class="todo_heading">{{templateName}}</h1>
+                </div>
+                <div class="task_discription">
+                    <p class="todo_paragragh">{{discription}}</p>
+                </div>
+            </div>
+            <div class="todo_btns">
+                <button class="remove_todo">Delete</button>
+                <button class="edit_todo">Edit</button>
+            </div>
+             <div class="editor_toast">
+                <div class="editor_input">
+                    <input class="edit_input" type="text">
+                </div>
+                <div class="editor_btns">
+                    <button class="cancel_editor">Cancel</button>
+                    <button class="save_editor">Save</button>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+    <script src="/index.js"></script>
+</body>
+
+</html>
