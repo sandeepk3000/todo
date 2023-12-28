@@ -6,10 +6,146 @@
 }
 
 html {
+    height: 100%;
     font-size: 62.5%;
 }
 
-.container {
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+.header {
+    background-color: white;
+
+    .nav_top {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 6rem;
+
+        .search_bar {
+            .search {
+                margin: 9px 0;
+                position: relative;
+
+                input {
+                    max-width: 27rem;
+                    height: 3.5rem;
+                    border: none;
+                    border-radius: 5rem;
+                    box-shadow: 1px 3px 8px -3px black;
+                    outline: none;
+                    padding: 0 2rem;
+
+                }
+
+                i {
+                    position: absolute;
+                    top: 0;
+                    left: 104%;
+                }
+            }
+        }
+
+        .nav_linkes {
+            .user_status {
+                .user_profile {
+                    visibility: hidden;
+                    display: grid;
+                    place-items: center;
+
+                    .img {
+                        width: 3.8rem;
+                        border-radius: 50%;
+                        height: 3.8rem;
+                        overflow: hidden;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .login {
+                    visibility: hidden;
+
+                    a {
+                        text-decoration: none;
+                        font-size: 1.5rem;
+                        background-color: green;
+                        color: white;
+                        padding: 0.3rem 2rem;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.wrapper {
+
+    .add_container {
+        height: auto;
+        width: 100%;
+    }
+
+    .add_drop {
+        height: 30%;
+    }
+
+    .add_info {
+        display: flex;
+        height: 70%;
+        flex-direction: column;
+
+        input {
+            max-width: 30rem;
+            height: 3.5rem;
+            border: none;
+            border-radius: 5rem;
+            box-shadow: 4px 3px 8px -7px black;
+            margin-bottom: 1rem;
+            outline: none;
+            padding: 0 2rem;
+            margin: auto;
+            margin-top: 9px;
+        }
+
+        textarea {
+            border: none;
+            max-width: 35rem;
+            height: 20rem;
+            outline: none;
+            border-radius: 0.5rem;
+            box-shadow: 4px 3px 8px -7px #000000;
+            margin-bottom: 1rem;
+            background-color: #ffffff;
+            color: #000000;
+            padding: 1rem;
+            resize: none;
+            margin: auto;
+            margin-top: 9px;
+        }
+
+        button {
+            border: none;
+            width: 9rem;
+            height: auto;
+            background-color: aqua;
+            border-radius: 0.3rem;
+            cursor: pointer;
+            margin: auto;
+            margin-top: 9px;
+        }
+    }
+}
+
+
+.todo_container {
     margin-top: 5rem;
 
     .todo {
@@ -21,15 +157,28 @@ html {
         margin: auto;
         max-width: 60%;
         margin-bottom: 2rem;
-        min-width: 18rem;
+        min-width: 30rem;
         height: auto;
         display: flex;
         flex-direction: column;
         gap: 2rem;
 
+        .btn {
+            margin-right: .5rem;
+            border: none;
+            width: 7rem;
+            height: 2.2rem;
+            background-color: aqua;
+            border-radius: .3rem;
+            cursor: pointer;
+        }
+
         .content {
             .task_discription {
                 margin-top: 1rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
 
                 p {
                     font-size: 1.3rem;
@@ -38,6 +187,10 @@ html {
             }
 
             .task_name {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
                 h2 {
                     font-size: 2rem;
                     font-weight: 600;
@@ -47,38 +200,33 @@ html {
             }
         }
 
-        .todo_btns {
+        .edit_btn_wrapper {
             margin-top: auto;
 
-            button {
-                margin-right: .5rem;
-                border: none;
-                width: 7rem;
-                height: 2.2rem;
-                background-color: aqua;
-                border-radius: .3rem;
-                cursor: pointer;
-            }
+
         }
-        .editor_toast{
+
+        .editor_toast {
             display: none;
         }
-       
+
     }
-    .editor_active .editor_toast{
+
+    .editor_active .editor_toast {
         position: absolute;
-        width: 87%;
+        width: 100%;
         background-color: black;
         color: white;
-        top: 35%;
-        height: 60%;
+        top: 0%;
+        left: 0%;
+        height: 100%;
         padding: 1rem;
         display: flex;
-    flex-direction: column;
-    
+        flex-direction: column;
+
         .editor_input {
             display: flex;
-    
+
             input {
                 width: 70%;
                 height: 30px;
@@ -92,11 +240,11 @@ html {
                 border-bottom: 1px solid lime;
             }
         }
-    
+
         .editor_btns {
-    
+
             margin-top: auto;
-    
+
             button {
                 border: none;
                 margin-left: 3rem;
@@ -107,4 +255,24 @@ html {
         }
     }
 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    margin: auto;
+    background-color: #f7f6f6;
+    border-radius: 1rem;
+
+    input {
+        margin-bottom: 2.5rem;
+        outline: none;
+        border: none;
+        width: 34rem;
+        height: 3.5rem;
+        border-radius: 5rem;
+        padding: 0 1rem;
+        font-size: 1.5rem;
+    }
 }

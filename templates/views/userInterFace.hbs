@@ -10,37 +10,54 @@
 </head>
 
 <body>
-    <button class="btn">Add</button>
-    <input type="text" class="templateName">
-    <input type="text" class="discription">
-    <div class="container">
-        {{#each templates }}
-        <div class="todo" id="{{templateId}}">
-            <div class="content">
-                <div class="task_name">
-                    <h1 class="todo_heading">{{templateName}}</h1>
-                </div>
-                <div class="task_discription">
-                    <p class="todo_paragragh">{{discription}}</p>
-                </div>
+   {{>task_nav}}
+    <div class="wrapper">
+        <div class="add_container">
+            <div class="add_drop">
+                <i>Drop</i>
             </div>
-            <div class="todo_btns">
-                <button class="remove_todo">Delete</button>
-                <button class="edit_todo">Edit</button>
-            </div>
-             <div class="editor_toast">
-                <div class="editor_input">
-                    <input class="edit_input" type="text">
-                </div>
-                <div class="editor_btns">
-                    <button class="cancel_editor">Cancel</button>
-                    <button class="save_editor">Save</button>
-                </div>
+            <div class="add_info">
+                <input class="add_input" type="text" placeholder="task name...">
+                <textarea name="dfsdf" id="" cols="30" class="add_discription" placeholder="task discription.." rows="10"></textarea>
+                <button class="add_btn">Add</button>
             </div>
         </div>
-        {{/each}}
-    </div>
+        <div class="todo_container">
+            {{#each templates }}
+            <div class="todo" id="{{templateId}}">
+                 
+                <div class="content">
+                    <div class="task_name">
+                        <h1 class="todo_heading">{{templateName}}</h1>
+                        <div class="edit_btn_wrapper">
+                            <button class="name_edit_btn btn">Edit</button>
+                        </div>
+                    </div>
+                    <div class="task_discription">
+                        <p class="todo_dicription">{{discription}}</p>
+                        <div class="edit_btn_wrapper">
+                            <button class="dis_edit_btn btn">Edit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="todo_btns">
+                    <button class="remove_todo btn">Delete</button>
+                    <span class="task_time">{{taskTime}}</span>
+                </div>
+                <div class="editor_toast">
+                    <div class="editor_input">
+                        <input class="edit_input" type="text">
+                    </div>
+                    <div class="editor_btns">
+                        <button class="cancel_editor">Cancel</button>
+                        <button class="save_editor">Save</button>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
 
+    </div>
     <script src="/index.js"></script>
 </body>
 
